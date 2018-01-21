@@ -1,14 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
- 
 <head>
-    <title>Passport with Sequelize</title>
+	<title>Pick-me-mon | Profile</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel = "stylesheet" href="/assets/css/style.css" type="text/css"/>
+	<style>
+		body 		{ padding-top:80px; word-wrap:break-word; }
+	</style>
 </head>
- 
 <body>
-    <h2>Dashboard</h2>
-    <h5>Hurray! you are logged in.</h5>
- 
+<div class="container">
+
+	<div class="page-header text-center">
+		<h1>Profile Page</h1>
+		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+	</div>
+
+	<div class="row">
+		<!-- LOCAL INFORMATION -->
+		<div class="col-sm-6">
+			<div class="well">
+					<p>
+						<strong>Name: Clarke Fry</strong>{{User.name}}<br>
+						<strong>Age: 28 </strong>{{age}}<br>
+						<strong>Interested In: Women </strong>{{interest}}<br>
+						<strong>Bio: Here is my short bio! </strong>{{bio}}<br>
+						<strong>Pokemon Type: Fire </strong>{{poketype}}<br>
+					</p>
+			</div>
+		</div>
+
+		<div class = "col-sm-6">
+			<div class="well wellcenter">
+				<button class="btn btn-danger btn-lg match">Find a match!</button>
+			</div>
+		</div>
+	</div>
+
+	<div class = "row">
+		<div class = "col-sm-6">
+			<div class="well wellcenter">
+				<h2>My Pick-me-mon</h2>
+			</div>
+		</div>
+		<div class = "col-sm-6">
+			<div class="well">
+
+			</div>
+		</div>
+
+	</div>
+
+</div>
 </body>
- 
 </html>

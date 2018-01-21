@@ -55,8 +55,13 @@
         { email:email,
         password:userPassword,
         firstname: req.body.firstname,
-        lastname: req.body.lastname
+        lastname: req.body.lastname,
+        age: req.body.age,
+        bio: req.body.bio,
+        poketype: req.body.poketype
         };
+
+        console.log(data);
 
 
         User.create(data).then(function(newUser,created){

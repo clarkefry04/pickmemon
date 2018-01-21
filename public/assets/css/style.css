@@ -1,0 +1,19 @@
+body{
+	color: black !important;
+}
+
+h2{
+	align: center;
+}
+
+.match{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wellcenter{
+	text-align: center;
+}
+/*h1{
+	color:red !important;
+}*/
