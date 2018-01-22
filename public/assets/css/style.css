@@ -1,5 +1,6 @@
 body{
-	color: black !important;
+	background-image: url("../images/bg.jpg") !important;
+	/*background-color: blue;*/
 }
 
 h2{
@@ -9,11 +10,15 @@ h2{
 .match{
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 20px;
 }
 
 .wellcenter{
 	text-align: center;
 }
-/*h1{
-	color:red !important;
-}*/
+
+.well{
+	padding: 0px 20px;
+	height: 250px;
+}
+

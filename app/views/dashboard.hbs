@@ -10,47 +10,87 @@
 	</style>
 </head>
 <body>
-<div class="container">
 
-	<div class="page-header text-center">
-		<h1>Profile Page</h1>
-		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+	<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a  href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/180122/43da7f651c93970f1dc39b9430fc5a36.png" alt="pokemon-font" border="0"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <!-- <li class="active"><a href="#">Home</a></li> -->
+            <!-- <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li> -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            {{!-- <li><a href="/signin">Login</a></li> --}}
+            <li class="active"><a href="/logout">Logout <span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+	<div class="container">
+
+		{{!-- <div class="page-header text-center">
+			<h1>Profile Page</h1>
+			<a href="/logout" class="btn btn-default btn-sm">Logout</a>
+		</div> --}}
+
+		<div class="row">
+			<!-- LOCAL INFORMATION -->
+			<div class="col-sm-6">
+				<div class="well wellright">
+						<p>
+							<h3>Profile</h3>
+							<strong>Name:</strong> Seamus<br>
+							<strong>Age:</strong> 28<br>
+							<strong>Interested In:</strong> Women<br>
+							<strong>Pokemon Type:</strong> Fire<br>
+							<strong>Swag Points:</strong> 100<br>
+							<strong>Bio:</strong> Professional Pokemon Player<br>
+						</p>
+				</div>
+			</div>
+
+			<div class = "col-sm-6">
+				<div class="well wellcenter">
+					<h3>Your next captor is waiting!</h3><br>
+					<button class="btn btn-danger btn-lg match">Pick em!</button>
+				</div>
+			</div>
+		</div>
+
+		<div class = "row">
+			<div class = "col-sm-6">
+				<div class="well">
+					<h3>My Captors</h3>
+
+					<a href="/battle"><img width ="120px" name="grass" src="https://orig00.deviantart.net/d8d1/f/2013/229/5/a/bw_grass_basic_pokemon_card_blank_by_the_ketchi-d6i22ey.png"></img></a>
+
+					<img width="120px" name="water" src="http://www.pokebeach.com/images/fake-cards/water/gym/basic.jpg"></img>
+
+					<img width="120px" name="fire" src="http://pa4.pokemonaaah.net/pokemon/2-fake-cards/07-myopc/02-step/downloads/cards-new/fire-basic-reg.jpg"></img>
+
+					<img width="120px" name="water" src="http://www.pokebeach.com/images/fake-cards/water/gym/basic.jpg"></img>
+
+				</div>
+			</div>
+			<div class = "col-sm-6">
+				<div class="well wellcenter">
+					<h3>Message Board</h3>
+
+				</div>
+			</div>
+
+		</div>
+
 	</div>
-
-	<div class="row">
-		<!-- LOCAL INFORMATION -->
-		<div class="col-sm-6">
-			<div class="well">
-					<p>
-						<strong>Name: </strong><br>
-						<strong>Age: </strong><br>
-						<strong>Bio: </strong><br>
-						<strong>Pokemon Type: </strong><br>
-					</p>
-			</div>
-		</div>
-
-		<div class = "col-sm-6">
-			<div class="well wellcenter">
-				<button class="btn btn-danger btn-lg match">Find a match!</button>
-			</div>
-		</div>
-	</div>
-
-	<div class = "row">
-		<div class = "col-sm-6">
-			<div class="well wellcenter">
-				<h2>My Pick-me-mon</h2>
-			</div>
-		</div>
-		<div class = "col-sm-6">
-			<div class="well">
-
-			</div>
-		</div>
-
-	</div>
-
-</div>
 </body>
 </html>

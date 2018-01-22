@@ -12,6 +12,10 @@ exports.signin = function(req, res) {
     res.render('signin');
  
 }
+
+exports.battle = function(req,res) {
+	res.render('battle');
+}
  
  
 exports.dashboard = function(req, res) {
