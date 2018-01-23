@@ -17,11 +17,11 @@ module.exports = function(app, passport) {
         }
  
     ));
- 
- 
     app.get('/dashboard', isLoggedIn, authController.dashboard);
+ 
+    app.get('/swiper', isLoggedIn, authController.swiper);
 
-    app.get('/battle', isLoggedIn, authController.dashboard);
+    app.get('/battle', isLoggedIn, authController.battle);
  
  
  

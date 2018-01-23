@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	<link rel="stylesheet" href="/assets/css/style.css">
+
+	<title>ITS TIME TO FIGHT</title>
+
+</head>
+<body class="battlebody">
+	<div class="container float-left">
+		<img src="assets/images/unc.jpg" class="rounded float-left" id="opponent" alt="...">
+	<h3 id="h3swag"> Opponent's Swag <span id="opponent-swag"></span></h3>
+	</div>
+
+	<div class="container float-right">
+		<img src="/assets/images/sizzler.png" class="rounded float-right" id="player" alt="...">
+	<h3 class="float-right" id= "h3swag"> Your Swag <span id="player-swag"></span>
+	</div>
+		
+		<div>
+	<button type= "button" class="btn btn-danger" id="attack-button" onclick="attack()">ATTACK</button>
+	<button type= "button" class="btn btn-warning" id="flee-button" onclick="location.href = '/swiper';">FLEE</button>
+		</div>
+	<button type= "button" class="btn btn-light" id="restart-button" hidden="true" onclick="restart()">RESTART</button>
+	<h3 id="game-message"> </h3>
+<div id="player">
+    <audio autoplay hidden>
+     <source src="../music/battlesong.mp3" type="audio/mpeg">
+                If you're reading this, audio isn't supported. 
+    </audio>
+</div> 
+</body>
+<script type="text/javascript" src="/assets/js/pbattle.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+</html>
