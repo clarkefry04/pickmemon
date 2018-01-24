@@ -3,7 +3,7 @@ var app = express()
 var passport = require('passport')
 var session = require('express-session')
 var bodyParser = require('body-parser')
-// var env = require('dotenv').load()
+var env = require('dotenv').load()
 var exphbs = require('express-handlebars')
 
 app.use(express.static("public"));
@@ -67,5 +67,5 @@ models.sequelize.sync().then(function() {
 // });
 
 
-var port = process.env.PORT || 3300;
+var PORT = process.env.PORT || 3000;
 app.listen(port);
