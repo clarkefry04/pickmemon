@@ -69,6 +69,20 @@ background: url("/assets/images/bg.jpg") no-repeat center center fixed;
 background-size: 100% 100%;
 }
 
+#messagebox{
+	height: 120px;
+	max-width: 500px;
+	margin-bottom: 10px;
+	overflow-y: scroll;
+	background-color: white;
+	text-align: left;
+}
+.searchDropdown{
+	color:black;
+	background-color: white;
+	text-align: left;
+}
+
 #h3swag{
 	font-family: "Comic Sans MS", cursive, sans-serif;
 }

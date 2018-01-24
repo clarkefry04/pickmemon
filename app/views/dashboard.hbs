@@ -87,11 +87,82 @@
 				<div class="well wellcenter">
 					<h3>Message Board</h3>
 
+					<div id="messageboard">
+					<div class="container" id="messagebox">
+					</div>
+
+					    <div id="custom-search-input">
+					      <div class="input-group col-md-8">
+					        <input type="text" class="search-query form-control" placeholder="Send the group a message!"/>
+					          <span class="input-group-btn">
+					               <button class="btn btn-danger push" type="button" id="button">Send</button>
+					            </div>
+					          </span>
+					      </div>
+					  </div>
+
 				</div>
 			</div>
 
 		</div>
 
 	</div>
+	<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script>
+
+	$(document).ready(function(){  
+	   var config = {
+          apiKey: "AIzaSyDUSES2eRDUpu6JUxqycvxjlDXcmf_dgAQ",
+          authDomain: "pickmemon.firebaseapp.com",
+          databaseURL: "https://pickmemon.firebaseio.com",
+          projectId: "pickmemon",
+          storageBucket: "pickmemon.appspot.com",
+          messagingSenderId: "638890670374"
+      };
+          
+      firebase.initializeApp(config);
+
+    // variable to reference the database
+      var database = firebase.database();
+
+    // initial search value
+      var search = "Pickmemon";
+
+    //calling value from search bar and inputting to firebase
+    $(document).on("click", ".push", function(event){
+    	 event.preventDefault();
+    	 search = $(".search-query").val().trim();
+    	 console.log(database.ref());
+
+    	 database.ref("history").push(
+          {
+            Search: search,
+          });
+
+          console.log(database.ref().child("history"));
+
+          var historyRef= database.ref("history");
+
+          historyRef.on('value', function(snapshot){
+          $(".searchHistory").empty();
+          snapshot.forEach(function(childSnapshot) {
+          
+          console.log(childSnapshot.val().Search);
+
+          var newSearch = $("<p class='searchDropdown'>");
+          newSearch.text(childSnapshot.val().Search);
+          var user = "<strong>Seamus: </strong>"
+
+          $("#messagebox").prepend(user, newSearch);
+
+          return false;
+   		});
+     	});
+		});
+
+     });
+
+    </script>
 </body>
 </html>
