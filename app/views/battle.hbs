@@ -1,35 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-	<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+<link rel = "stylesheet" href="/assets/css/style.css" type="text/css"/>>
 
-	<title>ITS TIME TO FIGHT</title>
+	<title>Pickmemon | Battle</title>
 
 </head>
+
 <body class="battlebody">
-	<div class="container float-left">
-		<img src="assets/images/unc.jpg" class="rounded float-left" id="opponent" alt="...">
-	<h3 id="h3swag"> Opponent's Swag <span id="opponent-swag"></span></h3>
+
+  <nav class="navbar navbar-default navbar-fixed-top battlenav">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a  href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/180122/43da7f651c93970f1dc39b9430fc5a36.png" alt="pokemon-font" border="0"></a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <!-- <li class="active"><a href="#">Home</a></li> -->
+              <!-- <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li> -->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/dashboard">Profile</a></li>
+              <li class="active"><a href="/logout">Logout <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+     </nav>
+
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-sm-12 battlebox">
+				<button type= "button" class="btn btn-danger" id="attack-button" onclick="attack()">ATTACK</button>
+				<button type= "button" class="btn btn-warning" id="flee-button" onclick="location.href = '/swiper';">FLEE</button>
+				<button type= "button" class="btn btn-light" id="restart-button" hidden="true" onclick="restart()">RESTART</button>
+				<h3 id="game-message"> </h3>
+			</div>
+		<div>
+
+		<div class="row">
+			<div class="col-sm-5 opponentbox">
+				<img src="assets/images/bristly.png" id="opponent" alt="...">
+				<div class="well" id="score"><h2> Opponent's Swag: <span id="opponent-swag"></span></h3></div>
+			</div>
+			<div class="col-sm-7"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-7"></div>
+			<div class="col-sm-5 playerbox">
+				<div class="well" id="score"><h2> Your Swag: <span id="player-swag"></span></h3></div>
+				<img src="/assets/images/sizzler.png" id="player" alt="...">
+				
+			</div>
+		</div>	
+
+		<div id="musicplayer">
+	    	<audio autoplay hidden>
+	     	<source src="/assets/music/battlesong.mp3" type="audio/mpeg">
+	                If you're reading this, audio isn't supported. 
+	   		 </audio>
+		</div> 
 	</div>
 
-	<div class="container float-right">
-		<img src="/assets/images/sizzler.png" class="rounded float-right" id="player" alt="...">
-	<h3 class="float-right" id= "h3swag"> Your Swag <span id="player-swag"></span>
-	</div>
-		
-		<div>
-	<button type= "button" class="btn btn-danger" id="attack-button" onclick="attack()">ATTACK</button>
-	<button type= "button" class="btn btn-warning" id="flee-button" onclick="location.href = '/swiper';">FLEE</button>
-		</div>
-	<button type= "button" class="btn btn-light" id="restart-button" hidden="true" onclick="restart()">RESTART</button>
-	<h3 id="game-message"> </h3>
-<div id="player">
-    <audio autoplay hidden>
-     <source src="../music/battlesong.mp3" type="audio/mpeg">
-                If you're reading this, audio isn't supported. 
-    </audio>
-</div> 
 </body>
 <script type="text/javascript" src="/assets/js/pbattle.js"></script>
 

@@ -1,10 +1,12 @@
 <!DOCTYPE HTML> 
 <html>
 <head>
-<title>Swipe!</title>
+<title>Pick-me-mon | Swipe</title>
 <meta http-equiv="X-UA-Compatible" content="IE=8">
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/> 
-<link href='/assets/css/style.css' rel='stylesheet'/>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+<link rel = "stylesheet" href="/assets/css/style.css" type="text/css"/>
 <style>
 /* Swipe 2 required styles */
 .swipe {
@@ -25,6 +27,7 @@
 </style>
 
 </head>
+
 <body class="swiperbody">
 
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -88,9 +91,9 @@
 
       <div style='text-align:center;padding-top:20px;'>
         
-        <button onclick='mySwipe.prev()'>prev</button> 
-        <button onclick="location.href = '/battle';">BATTLE</button>
-        <button onclick='mySwipe.next()'>next</button>
+        <button class="btn btn-large btn-warning" onclick='mySwipe.prev()'>prev</button> 
+        <button class="btn btn-large btn-danger" onclick="location.href = '/battle';">BATTLE</button>
+        <button class="btn btn-large btn-warning" onclick='mySwipe.next()'>next</button>
 
       </div>
 
