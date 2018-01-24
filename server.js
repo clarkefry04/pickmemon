@@ -68,3 +68,4 @@ models.sequelize.sync().then(function() {
 
 
 var port = process.env.PORT || 3300;
+app.listen(port);
