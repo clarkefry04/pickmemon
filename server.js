@@ -56,8 +56,12 @@ models.sequelize.sync().then(function() {
     console.log(err, "Something went wrong with the Database Update!")
 });
  
-app.listen(5000, function(err) {
-    if (!err)
-        console.log("Site is live");   
-    else console.log(err)
+// app.listen(5000, function(err) {
+//     if (!err)
+//         console.log("Site is live");   
+//     else console.log(err)
+// });
+
+app.listen(process.env.PORT || 5000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
