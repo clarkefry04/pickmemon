@@ -39,13 +39,15 @@ app.get('/', function(req, res) {
     res.render('main');
 });
 
-// app.use("/", routes);
+
  
 //Models
 var db = require("./app/models");
  
 //Routes
 var routes = require('./app/routes/auth.js')(app,passport);
+
+// app.use("/", routes);
  
  
 //load passport strategies

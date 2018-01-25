@@ -1,8 +1,13 @@
-// var express = require("express");
+var express = require("express");
 
-// var router = express.Router();
-// // grabbing our models
-// var db = require("../models");
+var router = express.Router();
+// grabbing our models
+var db = require("../models");
+
+router.get("/", function(req, res) {
+  // send us to the next get function instead.
+  res.redirect("/main");
+});
 
  
 // router.get("/signup", function(req, res) {
