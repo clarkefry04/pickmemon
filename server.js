@@ -6,6 +6,7 @@ var bodyParser = require('body-parser')
 var env = require('dotenv').load()
 var exphbs = require('express-handlebars')
 
+
 app.use(express.static("public"));
  
  
@@ -39,34 +40,26 @@ app.get('/', function(req, res) {
 });
  
 //Models
-var models = require("./app/models");
+var db = require("./app/models");
  
 //Routes
 var authRoute = require('./app/routes/auth.js')(app,passport);
  
  
 //load passport strategies
-require('./app/config/passport/passport.js')(passport, models.user);
+require('./app/config/passport/passport.js')(passport, db.user);
  
  
 //Sync Database
-models.sequelize.sync().then(function() {
-    console.log('Nice! Database looks fine')
-}).catch(function(err) {
-    console.log(err, "Something went wrong with the Database Update!")
-});
- 
-// app.listen(5000, function(err) {
-//     if (!err)
-//         console.log("Site is live");   
-//     else console.log(err)
+// models.sequelize.sync().then(function() {
+//     console.log('Nice! Database looks fine')
+// }).catch(function(err) {
+//     console.log(err, "Something went wrong with the Database Update!")
 // });
+ 
+
 
 var port = process.env.PORT || 3000;
 db.sequelize.sync().then(function() {
   app.listen(port);
 });
-
-
-// var port = process.env.PORT || 3000;
-// app.listen(port);
