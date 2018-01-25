@@ -1,3 +1,41 @@
+// var express = require("express");
+
+// var router = express.Router();
+// // grabbing our models
+// var db = require("../models");
+
+ 
+// router.get("/signup", function(req, res) {
+//     res.render('signup');
+// });
+ 
+// router.get("/signin", function(req, res) {
+//     res.render('signin');
+// });
+
+// router.get("/swiper", function(req,res) {
+// 	res.render('swiper');
+// });
+
+// router.get("/battle", function(req,res) {
+// 	res.render('battle');
+// });
+ 
+// router.get("/dashboard", function(req, res) {
+//     res.render('dashboard');
+// });
+
+// router.get("/logout", function(req, res) {
+//     req.session.destroy(function(err) {
+//         res.redirect('/');
+//     });
+// });
+
+// module.exports = router;
+
+
+
+
 var exports = module.exports = {}
  
  
@@ -28,8 +66,3 @@ exports.logout = function(req, res) {
  
 }
 
-// var express = require("express");
-
-// var router = express.Router();
-// // grabbing our models
-// var db = require("../models");

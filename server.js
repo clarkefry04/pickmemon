@@ -35,15 +35,17 @@ app.engine('hbs', exphbs({
 app.set('view engine', '.hbs');
  
  
-app.use('/', function(req, res) {
-    res.render('/main');
+app.get('/', function(req, res) {
+    res.render('main');
 });
+
+// app.use("/", routes);
  
 //Models
 var db = require("./app/models");
  
 //Routes
-var authRoute = require('./app/routes/auth.js')(app,passport);
+var routes = require('./app/routes/auth.js')(app,passport);
  
  
 //load passport strategies
