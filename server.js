@@ -35,7 +35,7 @@ app.engine('hbs', exphbs({
 app.set('view engine', '.hbs');
  
  
-app.get('/', function(req, res) {
+app.use('/', function(req, res) {
     res.render('main');
 });
  

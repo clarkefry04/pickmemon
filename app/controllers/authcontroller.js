@@ -27,3 +27,9 @@ exports.logout = function(req, res) {
     });
  
 }
+
+// var express = require("express");
+
+// var router = express.Router();
+// // grabbing our models
+// var db = require("../models");
